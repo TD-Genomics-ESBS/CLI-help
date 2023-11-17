@@ -50,6 +50,14 @@ You can use several `..` to go to the parent directory of the parent directory, 
 cd ../..
 ```
 
+**curent directory**: the path for the current directory is `.`
+
+By example, you want copy a file in current directory:
+
+```bash
+cp /home/user/data/file .
+```
+
 ### List directory contents
 
 Without any option, It's allow you to know what is in the current directory. You can add the `-l` option to display more information about the files and directories.The `-a` option will display hidden files and directories (theses file names begins with a `.`). You can also combine options.
@@ -66,13 +74,13 @@ ls /home/user # display the content of the directory /home/user
 
 It's important to know the difference between relative and absolute path. 
 
-**Absolute path**: the path from the root directory to the file/directory. It's always start with `/`.
+**Absolute path**: the path from the root directory to the file/directory. It always starts with `/`.
 
 ```bash
 /absolute/path/to/file
 ```
 
-**Relative path**: the path from the current directory to the file/directory. It's never start with `/`.
+**Relative path**: the path from the current directory to the file/directory. It never starts with `/`.
 
 ```bash
 relative/path/to/file
@@ -92,7 +100,6 @@ cd /data # absolute path
 cd ../../data # relative path
 ```
 
-```bash
 ## File and directory manipulation
 
 ### Create new directory named <directory>
@@ -101,14 +108,14 @@ cd ../../data # relative path
 mkdir <directory>
 ```
 
-### Remove a <file> or a <directory> 
+### Remove a file or a directory
 
 ```bash
 mkdir <file>
 mkdir -r <directory>
 ```
 
-### Copy <file> / <directory> (and it's contents) to a new <destination> (possibly overwriting an existing file/directory)
+### Copy file / directory (and it's contents) to a new destination (possibly overwriting an existing file/directory)
 
 ```bash
 cp <file> <destination>
@@ -117,7 +124,7 @@ cp -r <directory> <destination>
 
 The destination can be the directory where you want copy the file/directory or the new name of the file/directory.
 
-### Move <file> / <directory> (and it's contents) to a new <destination> (possibly overwriting an existing file/directory)
+### Move file / directory (and it's contents) to a new destination (possibly overwriting an existing file/directory)
 
 ```bash
 mv <file> <destination>
@@ -126,14 +133,14 @@ mv <directory> <destination>
 
 Destination: see `cp` command.
 
-### Delete <file> or <directory>
+### Delete file or directory
 
 ```bash
 rm <file>
 rm -r <directory>
 ```
 
-### Create an empty file named <file>
+### Create an empty file named file
 
 ```bash
 touch <file>
@@ -141,13 +148,13 @@ touch <file>
 
 ## File content manipulation
 
-### Display the all content of <file>
+### Display the all content of file
 
 ```bash
 cat <file>
 ```
 
-### Display content of <file> in interactive mode
+### Display content of file in interactive mode
 
 ```bash
 more <file>
@@ -157,7 +164,7 @@ Q: to quit
 RETURN: to see the next file
 ESPACE: to nee the next page
 
-### Display the first lines of <file>
+### Display the first lines of file
 
 By default, display the 10 first lines. Add the `-n` option to display the first *n* lines.
 
@@ -166,7 +173,7 @@ head <file>
 head -n 12 <file> # display the first 12 lines
 ```
 
-### Display  the last lines of <file>
+### Display  the last lines of file
 
 By default, display the 10 last lines. Add the `-n` option to display the last *n* lines.
 
@@ -181,7 +188,7 @@ tail -n 5 <file> # display the last 5 lines
 zcat <file>
 ```
 
-### Count the number of lines in <file>
+### Count the number of lines in file
 
 ```bash
 wc -l <file>
@@ -221,7 +228,7 @@ zcat <file> | wc -l
 
 ## Network
 
-### Etablish an SSH connection to <host> with <user>
+### Establish an SSH connection to <host> with <user>
 
 ```bash
 ssh <user>@<host>
